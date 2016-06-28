@@ -5,9 +5,187 @@
     <description>My Personal Blog</description>
     <link>/</link>
     <atom:link href="/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jun 2016 14:01:51 +0800</pubDate>
-    <lastBuildDate>Tue, 28 Jun 2016 14:01:51 +0800</lastBuildDate>
+    <pubDate>Tue, 28 Jun 2016 14:43:25 +0800</pubDate>
+    <lastBuildDate>Tue, 28 Jun 2016 14:43:25 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>防盗链说明</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;防盗链说明&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#background&quot;&gt;背景&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#list&quot;&gt;防盗链列表&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#detailed&quot;&gt;防盗链详解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;视频盗链的问题经常发生，最近新闻报道经常看到某公司告某公司盗用其网站视频链接。所谓视频盗链就是没有经过获得播放权平台的授权，直接通过某种技术手段，在自己网站上直接播放，这种方式对版权平台造成了服务器负荷增大，同时造成收益损失。&lt;/p&gt;
+
+&lt;p&gt;防盗链，其本质就是用户对自己的资源设置的访问限制，控制”谁”可以在”什么时间”访问到”什么资源”。不做防盗链，用户的许多资源都为其他人做了嫁衣，也会给自己的服务器增加不必要的访问压力和带宽消耗。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;防盗链列表&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;序号&lt;/th&gt;
+      &lt;th&gt;防盗链&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#ip&quot;&gt;IP黑白名单&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#referer&quot;&gt;Referer白名单&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#ua&quot;&gt;UA白名单&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#token&quot;&gt;Token加密串&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#swf&quot;&gt;swf文件防盗链&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;防盗链详解&lt;/h2&gt;
+
+&lt;h2 id=&quot;ip&quot;&gt;IP黑白名单&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;br /&gt;
+针对客户端IP进行校验，在服务器上设置黑/白名单，只阻止/允许某些IP访问资源，一般都是IP黑名单的形式。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;适用于直播协议&lt;/strong&gt;&lt;br /&gt;
+http、rtmp&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;直播推流：服务器设置 IP 白名单，允许符合白名单中 IP 地址的服务器推送直播流。&lt;/li&gt;
+  &lt;li&gt;播放：服务器设置 IP 黑名单，阻止符合黑名单中 IP 地址的用户观看。 （PS：也可以按照客户需求配置IP白名单，只允许符合白名单中IP地址的用户观看。）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;referer&quot;&gt;Referer白名单&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;br /&gt;
+最常用的防盗链手段，通过对HTTP请求中的referer header进行判断，以决定用户是否可以访问该资源。一般都是referer白名单的形式。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;适用于直播协议&lt;/strong&gt;&lt;br /&gt;
+http、rtmp&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;&lt;br /&gt;
+客户提供给我们一些信任的网站，除了这些网站的其他站点都不允许引用客户网站的特定内容，相当于提供允许访问的白名单。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;对于被禁止的访问，处理方法如下：  
+1）若为 http 访问，返回403状态码
+2）若为rtmp访问，直接断开链接。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;特别说明&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;若为 http 访问：referer 防盗链可以支持多个域名的形式，但域名必须是具体的，不能是泛域名，长度无限制，例如：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ent.cankaoxiaoxi.com&lt;/p&gt;
+
+&lt;p&gt;2.若为 rtmp 访问：referer防盗链支持单个域名和泛域名的形式，长度无限制，例如&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ent.cankaoxiaoxi.com  
+*.cankaoxiaoxi.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;3.空 Referer&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;若为 http 访问：禁止空 referer，不允许用户直接访问该资源。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例如：
+若用户直接在浏览器地址栏中输入一个资源的URL发起请求，该请求是不包含referer字段的（空referer），&amp;lt;br&amp;gt;
+则该请求会被拒绝，返回 403 状态码。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;若为 rtmp 访问：可以支持空 referer，即可以允许用户直接访问该资源。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例如：
+若用户在客户端直接发起访问，有可能是空 referer，这种情况下，客户是允许用户直接访问该资源的。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;ua&quot;&gt;UA白名单&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;br /&gt;
+HTTP 请求 header 中的 User Agent 字段，是一段浏览器或者设备标识自己的字符串。对于网站主来说，有时需要让一些资源只能在某些浏览器或者设备上才能访问。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;适用于直播协议&lt;/strong&gt;&lt;br /&gt;
+http&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;&lt;br /&gt;
+UA 防盗链通常用在手机 APP 或者一些可自定义 User Agent 的应用，比如播放器。设置 UA 白名单，只支持字符串完整校验，不支持正则匹配。&lt;/p&gt;
+
+&lt;h2 id=&quot;token&quot;&gt;Token加密串&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;br /&gt;
+Token 防盗链是功能最强的一种防盗链方式，开启防盗链后，每个文件的访问必须带上特定的 token 才能访问，并且可以设定每个 token 的有效时间。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;token 一般会在请求参数中，没有带 token 的外链，或者超过了有效期的token 链接都会返
+回 403,达到防盗链的目的。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;适用于直播协议&lt;/strong&gt;&lt;br /&gt;
+http、rtmp&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;&lt;br /&gt;
+Token 加密串，是通过资源 URL、密钥、过期时间生成的一个加密字符串。外链必须要带上这个 Token 才能在规定时间内访问到该资源。&lt;/p&gt;
+
+&lt;p&gt;token 防盗链的生成方式如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;双方提前约定公共密钥；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;根据设定规则，从访问链接中获取对应关键字，根据加密算法进行加密校验。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;swf-&quot;&gt;swf 文件防盗链&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt; SWF文件即swf，是Macromedia公司的动画设计软件Flash的专用格式，是一种支持矢量和点阵图形的动画文件格式，被广泛应用于网页设计，动画制作等领域，swf文件通常也被称为Flash文件。 Adobe Flash Player 本身具有安全机制，Adobe公司基于rtmp协议做了防盗链。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;适用于直播协议&lt;/strong&gt;&lt;br /&gt;
+rtmp&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;功能描述&lt;/strong&gt;&lt;br /&gt;
+播放器遵循协议，将 swf 文件信息通过握手包传送给服务器。服务器根据本地存放的 swf 遵照协议，验证访问合法性。若访问不合法，则拒绝访问；若访问合法，则返回信息。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Jun 2016 19:03:39 +0800</pubDate>
+        <link>/work/2016/06/27/fang-dao-lian.html</link>
+        <guid isPermaLink="true">/work/2016/06/27/fang-dao-lian.html</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>我的第一篇日志</title>
