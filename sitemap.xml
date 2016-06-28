@@ -5,8 +5,8 @@
     <description>My Personal Blog</description>
     <link>/</link>
     <atom:link href="/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jun 2016 15:22:10 +0800</pubDate>
-    <lastBuildDate>Tue, 28 Jun 2016 15:22:10 +0800</lastBuildDate>
+    <pubDate>Tue, 28 Jun 2016 15:25:09 +0800</pubDate>
+    <lastBuildDate>Tue, 28 Jun 2016 15:25:09 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -203,7 +203,12 @@ rtmp&lt;/p&gt;
   &lt;li&gt;cd myblog #打开blog文件夹&lt;/li&gt;
   &lt;li&gt;jekyll build #生成jekyll文件&lt;/li&gt;
   &lt;li&gt;jekyll serve #本地生成博客&lt;/li&gt;
-  &lt;li&gt;cd myblog/site #新开一个iTerm窗口，输入命令行进入blog文件夹中需要上传的文件夹_site 中&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;新开一个iTerm窗口,运行如下命令行&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cd myblog/site #输入命令行进入blog文件夹中需要上传的文件夹_site 中&lt;/li&gt;
   &lt;li&gt;git status #查看有哪些新增文档&lt;/li&gt;
   &lt;li&gt;git add . #添加所有改变到临时存储&lt;/li&gt;
   &lt;li&gt;git commit -m -a #推送所有改变到仓库&lt;/li&gt;
