@@ -5,9 +5,83 @@
     <description>My Personal Blog</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jun 2016 15:25:09 +0800</pubDate>
-    <lastBuildDate>Tue, 28 Jun 2016 15:25:09 +0800</lastBuildDate>
+    <pubDate>Sat, 02 Jul 2016 13:22:06 +0800</pubDate>
+    <lastBuildDate>Sat, 02 Jul 2016 13:22:06 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>与攻城狮的沟通日常</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;与攻城狮的沟通日常&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;背景&lt;/strong&gt;：攻城狮大大，觉得开发状态回传接口太麻烦，就让底层和系统页面实时回传响应状态。底层反馈响应成功之前，系统页面不能关闭，否则底层与系统页面断开，任务提交失败。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：响应时间过长，需要用户弹窗内容提交后，等1分钟左右。这1分钟内，页面不能关，不能动，否则任务提交失败。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;产品汪 : 用户不可能有耐心等1分钟，很可能会认为系统出错，直接关闭页面。&lt;img src=&quot;好可怕_meitu_1.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;攻城狮 : 就让用户等1分钟怎么了，1分钟还等不了了，想用我系统就得等1分钟。&lt;img src=&quot;贱人就是矫情_meitu_1.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;产品汪（内心戏 ）： &lt;img src=&quot;你TM在逗我.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;知道你们看戏的以为战事一触即发，不过……&lt;/p&gt;
+
+&lt;p&gt;面对傲娇滴攻城狮大大，脸皮千锤百炼的产品汪，是绝对不会发脾气滴，也是绝对不会拖鞋（妥协）滴。&lt;/p&gt;
+
+&lt;p&gt;开玩笑，做好系统交互，保证用户体验，是产品汪的天职啊天职。&lt;/p&gt;
+
+&lt;p&gt;让我们来面对疾风吧，勇士！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;产品汪祭出大杀器&lt;br /&gt;
+&lt;img src=&quot;持剑_meitu_2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;（下面这段话请脑补 武林外传 里 大家辩论时的语速）   
+
+产品是给甲方的，如果甲方着急产品上线，并不在意这些细节，那我们就让用户等1分钟。  
+如果甲方不着急产品上线，更在意用户体验，那我们就底层开发接口，解决这个问题。
+
+那么问题来了，需要甲方做判断，是牺牲用户体验，按时上线；还是保障用户体验，延期上线。
+
+甲方做判断，是衡量 工期延长时间造成的影响不好，还是用户体验差造成的影响不好。
+
+所以，现在我们要做的，就是 攻城狮 您这边给出解决此问题所需开发时间，我产品汪要做的就是跟客户沟通，看客户接受哪个方案。
+
+所以，攻城狮大大，你工期评估时间什么时候能给我？
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;攻城狮：下班前给你。 &lt;img src=&quot;憋BB_meitu_1.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+产品汪： &lt;img src=&quot;灰常好.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 Jul 2016 08:00:00 +0800</pubDate>
+        <link>/work/2016/07/01/%E4%B8%8E%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E6%B2%9F%E9%80%9A%E6%97%A5%E5%B8%B8.html</link>
+        <guid isPermaLink="true">/work/2016/07/01/%E4%B8%8E%E6%94%BB%E5%9F%8E%E7%8B%AE%E7%9A%84%E6%B2%9F%E9%80%9A%E6%97%A5%E5%B8%B8.html</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>防盗链说明</title>
